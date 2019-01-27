@@ -12,13 +12,15 @@ class TableViewCell: UITableViewCell {
 
     lazy var cycleView: ZCycleView = ZCycleView()
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         contentView.addSubview(cycleView)
         cycleView.setUrlsGroup(["http://chatm-icon.oss-cn-beijing.aliyuncs.com/pic/pic_20171101181927887.jpg", "http://chatm-icon.oss-cn-beijing.aliyuncs.com/pic/pic_20171114171645011.jpg", "http://chatm-icon.oss-cn-beijing.aliyuncs.com/pic/pic_20171114172009707.png"])
         cycleView.timeInterval = 3
     }
+    
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         cycleView.frame = bounds
